@@ -11,6 +11,10 @@ class Triangle
   end
   
   def kind 
+    if @l1 == @l2 && @l2 == @l3
+      @equilateral
+    
+    
     if person.class != Person 
       begin
         raise PartnerError
