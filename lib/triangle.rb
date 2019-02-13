@@ -20,6 +20,7 @@ class Triangle
     else 
     person.partner = self
   end
+end
   
   class TriangleError < StandardErrod
     def message
