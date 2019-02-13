@@ -15,7 +15,7 @@ class Triangle
       @equilateral
     if @l1 == @l2 || @l2 == @l3 && @l1 != 0 && @l3 != 0 
       @isosceles
-    if 
+    if @l1 + @l2 > @l3 || 
     
     if person.class != Person 
       begin
