@@ -10,13 +10,13 @@ class Triangle
     @scalene = scalene
   end
   
-  def kind 
+  def kind() 
     if @l1 == @l2 && @l2 == @l3 && @l3 != 0
-      return @equilateral
+      :equilateral
     elsif @l1 == @l2 || @l2 == @l3 && @l1 != 0 && @l3 != 0 
-      @isosceles
+      :isosceles
     elsif @l1 + @l2 > @l3 || @l1 + @l3 > @l2 || @l2 + @l3 > @l1 && @l1 != 0 && @l2 != 0 && @l3 != 0 
-      @scalene
+      :scalene
     else 
       begin
         raise TriangleError
