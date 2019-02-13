@@ -10,6 +10,14 @@ class Triangle
     @scalene = scalene
   end
   
+  def kind(l1, l2, l3)
+  l1, l2, l3 = [l1, l2, l3].sort
+  raise TriangleError if a <= 0 or a + b <= c
+  return :equilateral if a == c
+  return :isosceles if a == b or b == c
+  return :scalene
+end
+  
   def kind() 
     if @l1 <= 0 || @l2 <= 0 || @l3 <=0 
       begin
