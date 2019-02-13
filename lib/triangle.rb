@@ -12,10 +12,14 @@ class Triangle
   
   def kind(l1, l2, l3)
   l1, l2, l3 = [l1, l2, l3].sort
-  raise TriangleError if a <= 0 or a + b <= c
-  return :equilateral if a == c
-  return :isosceles if a == b or b == c
-  return :scalene
+  if a <= 0 or a + b <= c
+    raise TriangleError 
+  elsif a == c
+    return :equilateral 
+  elsif a == b or b == c
+    return :isosceles 
+  else
+    :scalene
   end
   
   
