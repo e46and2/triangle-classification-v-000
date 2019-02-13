@@ -10,7 +10,7 @@ class Triangle
     @scalene = scalene
   end
   
-  def kind(l1, l2, l3)
+  def kind()
   l1, l2, l3 = [l1, l2, l3].sort
   if a <= 0 or a + b <= c
     raise TriangleError 
