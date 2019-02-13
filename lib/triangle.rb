@@ -17,12 +17,11 @@ class Triangle
           rescue TriangleError => error
           puts error.message
       end
-    elsif  
-      if (@l1 == @l2 && @l2 == @l3 && @l3 > 0 && @l2 > 0 && @l1 > 0)
+    elsif (@l1 == @l2 && @l2 == @l3 && @l3 > 0 && @l2 > 0 && @l1 > 0)
         :equilateral
-      elsif (@l1 == @l2 || @l2 == @l3 || @l1 == @l3 && @l1 > 0 && @l3 > 0) 
+    elsif (@l1 == @l2 || @l2 == @l3 || @l1 == @l3 && @l1 > 0 && @l3 > 0) 
         :isosceles
-      elsif (@l1 + @l2 > @l3 || @l1 + @l3 > @l2 || @l2 + @l3 > @l1 && @l1 > 0 && @l2 > 0 && @l3 > 0 )
+    elsif (@l1 + @l2 > @l3 || @l1 + @l3 > @l2 || @l2 + @l3 > @l1 && @l1 > 0 && @l2 > 0 && @l3 > 0 )
         :scalene
     else 
         begin
@@ -30,7 +29,6 @@ class Triangle
           rescue TriangleError => error
           puts error.message
       end
-    end
    end
 end
   
