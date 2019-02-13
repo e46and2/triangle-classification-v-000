@@ -15,6 +15,7 @@ class Triangle
   end
   
   class TriangleError < StandardErrod
-    
+    def message
+      "This is not a triangle. Please try again."
   end
 end
