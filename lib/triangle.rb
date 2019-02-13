@@ -8,4 +8,5 @@ class Triangle
     @equilateral = equilateral
     @isosceles = isosceles
     @scalene = scalene
+  end
 end
