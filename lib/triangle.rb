@@ -15,16 +15,14 @@ class Triangle
       @equilateral
     if @l1 == @l2 || @l2 == @l3 && @l1 != 0 && @l3 != 0 
       @isosceles
-    if @l1 + @l2 > @l3 || 
-    
-    if person.class != Person 
+    if @l1 + @l2 > @l3 || @l1 + @l3 > @l2 || @l2 + @l3 > @l1 
+      @scalene
+    else 
       begin
-        raise PartnerError
-      rescue PartnerError => error
+        raise TriangleError
+      rescue TriangleError => error
           puts error.message
       end
-    else 
-    person.partner = self
   end
 end
   
