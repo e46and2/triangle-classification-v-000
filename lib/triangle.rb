@@ -13,7 +13,9 @@ class Triangle
   def kind 
     if @l1 == @l2 && @l2 == @l3
       @equilateral
-    
+    if @l1 == @l2 || @l2 == @l3
+      @isosceles
+    if 
     
     if person.class != Person 
       begin
