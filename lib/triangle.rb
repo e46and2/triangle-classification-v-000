@@ -11,13 +11,19 @@ class Triangle
   end
   
   def kind() 
-    if (@l1 == @l2 && @l2 == @l3 && @l3 > 0 && @l2 > 0 && @l1 > 0)
+    if @l1 <= 0 || @l2 <= 0 || @l3 <=0 
+      begin
+        raise TriangleError
+          rescue TriangleError => error
+          puts error.message
+      end
+    else 
+      if (@l1 == @l2 && @l2 == @l3 && @l3 > 0 && @l2 > 0 && @l1 > 0)
       :equilateral
     elsif (@l1 == @l2 || @l2 == @l3 || @l1 == @l3 && @l1 > 0 && @l3 > 0) 
       :isosceles
     elsif (@l1 + @l2 > @l3 || @l1 + @l3 > @l2 || @l2 + @l3 > @l1 && @l1 > 0 && @l2 > 0 && @l3 > 0 )
       :scalene
-    else 
         begin
         raise TriangleError
           rescue TriangleError => error
